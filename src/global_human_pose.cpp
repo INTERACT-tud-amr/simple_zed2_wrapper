@@ -130,7 +130,8 @@ void objectsCallback(const simple_zed2_wrapper::ObjectsStamped::ConstPtr& msg)
     // Get the human pose from the ZED camera
     int id = 100; // Start from 100 for the derived object id for humans.
 
-    std::set <int> human_ids_to_pub = {4, 7, 9, 11, 12};
+    // Change this line to output the joints you want to publish. Specific joint meaning can be found in the README.md
+    std::set <int> human_joint_ids_to_pub = {4, 7, 9, 11, 12};
 
     for(int i = 0; i < msg->objects.size(); i++)
     {
@@ -193,8 +194,8 @@ void objectsCallback(const simple_zed2_wrapper::ObjectsStamped::ConstPtr& msg)
                 // Get the human pose in the world frame
                 for(int j = 0; j < num_joints; j++)
                 {
-                    // Check if the joint is in the human_ids_to_pub
-                    if(human_ids_to_pub.find(j) == human_ids_to_pub.end())
+                    // Check if the joint is in the human_joint_ids_to_pub
+                    if(human_joint_ids_to_pub.find(j) == human_joint_ids_to_pub.end())
                     {
                         continue;
                     }
