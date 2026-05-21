@@ -8,6 +8,8 @@ The ros_msg defined in ZED ROS2 wrapper is used for topic-based communication. T
 - Tested environment. Ubuntu 20.04 + ROS Noetic.
 
 ## Installation
+Due to Cuda (Jetson) dependencies, the user that needs to run the ros node needs to be in the "video" user group. 
+
 ### Install ZED SDK
 Follow the instructions in [https://www.stereolabs.com/docs/get-started-with-zed](https://www.stereolabs.com/docs/get-started-with-zed) to install the SDK. Select the right system, e.g., Linux, Jetson. You can try to compile and run one of the examples to verify the installation.
 
