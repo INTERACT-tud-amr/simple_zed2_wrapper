@@ -17,7 +17,7 @@
     <arg name="depth_confidence" default="50"/> <!-- 0-100 -->
 
     <arg name="publish_rgb" default="true"/>
-    <arg name="publish_depth" default="false"/>
+    <arg name="publish_depth" default="true"/>
     <arg name="publish_point_cloud" default="true"/>
     <arg name="publish_point_cloud_global" default="true"/>
 
